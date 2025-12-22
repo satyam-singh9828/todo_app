@@ -29,15 +29,15 @@ app.use(cors({
 
 app.use(express.json()) ;
 app.use(body) ;
-app.use(
-    session ({
-        secret :"mysecret" ,
-        resave : false ,
-        saveUninitialized : false ,
-
-    })
-)
-
+app.use(session({
+  secret: 'your-secret',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {
+    secure: true,    // must be true on HTTPS (Render)
+    sameSite: 'none', // allow cross-site
+  }
+}));
 app.use( "/todos" , itemrouter) ;
 
 
