@@ -48,8 +48,9 @@ app.use((req , res ,next ) => {
     res.status(404).json({message : "route not found "});
 })
 const url = `mongodb+srv://${process.env.MONGO_DB_USERNAME}:${process.env.MONGO_DB_PASSWORD}@product.gbmwwiy.mongodb.net/?appName=${process.env.MONGO_DB_DATABASE}`;
+const PORT = process.env.PORT || 3000 ; 
 mongoose.connect(url).then( () => {
-    app.listen(3000 , () => {
+    app.listen(PORT, () => {
     console.log("server is listening on port 3000");    }) ;
 
 })
