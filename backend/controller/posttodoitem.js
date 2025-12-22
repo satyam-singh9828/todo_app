@@ -18,9 +18,7 @@ export const  posttodoitem = async (req , res , next ) => {
 
 }
 export const gettodoitem = async( req , res , next ) => {
-      if (!req.session.user) {
-    return res.status(401).json({ message: "Not logged in" });
-  }
+     
     const items = await todolist.find({
         userId : req.session.user._id 
     }) ;
