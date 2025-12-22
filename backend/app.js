@@ -21,7 +21,7 @@ const app = express() ;
 
 app.use(cors({
   origin: 'https://todosatya.netlify.app', // <-- your frontend URL
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // methods you use
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'], // methods you use
   credentials: true, // if you need cookies/auth headers
 }));
 
