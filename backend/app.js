@@ -20,10 +20,11 @@ const app = express() ;
 
 
 app.use(cors({
-     origin: ["http://localhost:5173", 
-    "https://todosatya.netlify.app/" ],
-  credentials: true
-}) ) ;
+  origin: 'https://todosatya.netlify.app', // <-- your frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // methods you use
+  credentials: true, // if you need cookies/auth headers
+}));
+
 
 app.use(express.json()) ;
 app.use(body) ;
