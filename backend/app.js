@@ -21,8 +21,8 @@ const app = express() ;
 
 
 app.use(cors({
-     origin: ["http://localhost:5173/", 
-     "" ],
+     origin: [
+     "https://stunning-vacherin-0c1153.netlify.app/" ],
   credentials: true
 }) ) ;
 
