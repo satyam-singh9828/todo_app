@@ -22,8 +22,8 @@ const app = express() ;
 
 app.use(cors({
      origin: [
-     "https://stunning-vacherin-0c1153.netlify.app" ],
- 
+     "https://toodoappp.netlify.app" ],
+ app
 }) ) ;
 
 app.use(express.json()) ;
